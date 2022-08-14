@@ -44,6 +44,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Log in"/>
                                         <connections>
+                                            <action selector="logInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8yg-sF-oFl"/>
                                             <segue destination="GwL-yE-yUG" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="cGW-gE-6xt"/>
                                         </connections>
                                     </button>

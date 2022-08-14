@@ -12,9 +12,16 @@ class WelcomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupView()
     }
     
+    
+    
+    //MARK: - Descriptions metods
+    
+    private func setupView() {
+        view.backgroundColor = .gray
+    }
 
     /*
     // MARK: - Navigation

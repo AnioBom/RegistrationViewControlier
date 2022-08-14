@@ -7,18 +7,35 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var textName: UITextField!
     @IBOutlet var textPassword: UITextField!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        textName.delegate = self
+        textPassword.delegate = self
+        
+        self.navigationController?.navigationBar.isHidden = true
         
     }
+    
+    @IBAction func logInButton(_ sender: Any) {
+        if textName.text == "User" && textPassword.text == "password" {
+           if let welcomeVC = storyboard?.instantiateViewController(withIdentifier: "WelcomeViewController") as? WelcomViewController{
+                self.navigationController?.pushViewController(welcomeVC, animated: false)
+            }
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.textName.resignFirstResponder()
+        return true
+    }
+    
     
     
     
@@ -38,12 +55,11 @@ class LoginViewController: UIViewController {
     }
     
     
-    /*
+
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
         guard let logOutSegue = segue.source as? WelcomViewController else { return }
         
     }
-     */
 
 }
 // MARK: - UIAlertController
@@ -57,5 +73,6 @@ extension LoginViewController {
         present(alert, animated: true)
     }
 }
+
 
 
