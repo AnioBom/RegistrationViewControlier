@@ -7,72 +7,73 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+final class LoginViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet var textName: UITextField!
-    @IBOutlet var textPassword: UITextField!
+    @IBOutlet var nameTF: UITextField!
+    @IBOutlet var passwordTF: UITextField!
     
+    private let user = "User"
+    private let password = "Password"
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+            super.viewDidLoad()
         
-        textName.delegate = self
-        textPassword.delegate = self
-        
-        self.navigationController?.navigationBar.isHidden = true
+        self.nameTF.delegate = self
+        self.passwordTF.delegate = self
         
     }
     
-    @IBAction func logInButton(_ sender: Any) {
-        if textName.text == "User" && textPassword.text == "password" {
-           if let welcomeVC = storyboard?.instantiateViewController(withIdentifier: "WelcomeViewController") as? WelcomViewController{
-                self.navigationController?.pushViewController(welcomeVC, animated: false)
-            }
-        }
+    
+    // MARK: - Group of override methods
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.user = user
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.textName.resignFirstResponder()
-        return true
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
+    //MARK: - main buttons
     
-    
-    
-    //MARK: - Additionals buttons
-    @IBAction func forgotNamePressed() {
-        guard let messageText1 = textName.text, !messageText1.isEmpty else {
-            showAlert(with: "Your name is User", and: "🌸")
-            return
-        }
+    @IBAction func logInPressed() {
+        guard nameTF.text == user, passwordTF.text == password else {
+            showAlert(
+                title: "Invalid login or password",
+                message: "Please, enter correct login and password",
+                textField: passwordTF
+            )
+        return
+    }
+        performSegue(withIdentifier: "openWelcomeVC", sender: nil)
     }
     
-    @IBAction func forgotPasswordPressed() {
-        guard let massageText2 = textPassword.text, !massageText2.isEmpty else {
-            showAlert(with: "Your password is password", and: "🌸")
-            return
-        }
+    //MARK: - Additional buttons
+    
+    @IBAction func forgotRegisterDate(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(title: "Oops!", message: "Your name is \(user)!")
+        :showAlert(title: "Oops!", message: "Your password is \(password)")
     }
     
+    //MARK: - go to the next screen
     
-
-    @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
-        guard let logOutSegue = segue.source as? WelcomViewController else { return }
-        
+    @IBAction func unwindSgue(segue: UIStoryboardSegue) {
+        nameTF.text = ""
+        passwordTF.text = ""
     }
-
-}
-// MARK: - UIAlertController
-extension LoginViewController {
-    private func showAlert(with title: String, and message: String) {
+    
+    //MARK: - Alert
+    
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        let okAction = UIAlertAction(title: "Ok", style: .default)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+            textField?.text = ""
+        }
         alert.addAction(okAction)
-        
         present(alert, animated: true)
     }
+    
 }
-
-
-

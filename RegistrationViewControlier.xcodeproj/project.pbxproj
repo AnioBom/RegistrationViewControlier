@@ -13,7 +13,7 @@
 		04DCA43D28A643B900E4E272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DCA43B28A643B900E4E272 /* Main.storyboard */; };
 		04DCA43F28A643BC00E4E272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DCA43E28A643BC00E4E272 /* Assets.xcassets */; };
 		04DCA44228A643BC00E4E272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DCA44028A643BC00E4E272 /* LaunchScreen.storyboard */; };
-		04DCA44A28A6501400E4E272 /* WelcomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCA44928A6501400E4E272 /* WelcomViewController.swift */; };
+		04DCA44A28A6501400E4E272 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCA44928A6501400E4E272 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		04DCA43E28A643BC00E4E272 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04DCA44128A643BC00E4E272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04DCA44328A643BC00E4E272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04DCA44928A6501400E4E272 /* WelcomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomViewController.swift; sourceTree = "<group>"; };
+		04DCA44928A6501400E4E272 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 				04DCA43528A643B900E4E272 /* AppDelegate.swift */,
 				04DCA43728A643B900E4E272 /* SceneDelegate.swift */,
 				04DCA43928A643B900E4E272 /* LoginViewController.swift */,
-				04DCA44928A6501400E4E272 /* WelcomViewController.swift */,
+				04DCA44928A6501400E4E272 /* WelcomeViewController.swift */,
 				04DCA43B28A643B900E4E272 /* Main.storyboard */,
 				04DCA43E28A643BC00E4E272 /* Assets.xcassets */,
 				04DCA44028A643BC00E4E272 /* LaunchScreen.storyboard */,
@@ -144,7 +144,7 @@
 				04DCA43A28A643B900E4E272 /* LoginViewController.swift in Sources */,
 				04DCA43628A643B900E4E272 /* AppDelegate.swift in Sources */,
 				04DCA43828A643B900E4E272 /* SceneDelegate.swift in Sources */,
-				04DCA44A28A6501400E4E272 /* WelcomViewController.swift in Sources */,
+				04DCA44A28A6501400E4E272 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
