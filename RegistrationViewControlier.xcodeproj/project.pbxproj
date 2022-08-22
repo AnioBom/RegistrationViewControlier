@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046B992D28B28FCB006CD56D /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B992C28B28FCB006CD56D /* InformationViewController.swift */; };
+		046B993328B387E0006CD56D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B993228B387E0006CD56D /* TabBarViewController.swift */; };
+		046B993528B38F9D006CD56D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B993428B38F9D006CD56D /* UserModel.swift */; };
 		04DCA43628A643B900E4E272 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCA43528A643B900E4E272 /* AppDelegate.swift */; };
 		04DCA43828A643B900E4E272 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCA43728A643B900E4E272 /* SceneDelegate.swift */; };
 		04DCA43A28A643B900E4E272 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCA43928A643B900E4E272 /* LoginViewController.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		046B992C28B28FCB006CD56D /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		046B993228B387E0006CD56D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		046B993428B38F9D006CD56D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		04DCA43228A643B900E4E272 /* RegistrationViewControlier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegistrationViewControlier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DCA43528A643B900E4E272 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04DCA43728A643B900E4E272 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +45,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		046B992E28B29056006CD56D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				04DCA43928A643B900E4E272 /* LoginViewController.swift */,
+				04DCA44928A6501400E4E272 /* WelcomeViewController.swift */,
+				046B992C28B28FCB006CD56D /* InformationViewController.swift */,
+				046B993228B387E0006CD56D /* TabBarViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		046B992F28B290BA006CD56D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				046B993428B38F9D006CD56D /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		046B993028B290CD006CD56D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				04DCA43B28A643B900E4E272 /* Main.storyboard */,
+				04DCA44028A643BC00E4E272 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		046B993128B2911D006CD56D /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				04DCA43528A643B900E4E272 /* AppDelegate.swift */,
+				04DCA43728A643B900E4E272 /* SceneDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
 		04DCA42928A643B800E4E272 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +101,11 @@
 		04DCA43428A643B900E4E272 /* RegistrationViewControlier */ = {
 			isa = PBXGroup;
 			children = (
-				04DCA43528A643B900E4E272 /* AppDelegate.swift */,
-				04DCA43728A643B900E4E272 /* SceneDelegate.swift */,
-				04DCA43928A643B900E4E272 /* LoginViewController.swift */,
-				04DCA44928A6501400E4E272 /* WelcomeViewController.swift */,
-				04DCA43B28A643B900E4E272 /* Main.storyboard */,
+				046B992F28B290BA006CD56D /* Models */,
+				046B993128B2911D006CD56D /* SupportFiles */,
+				046B992E28B29056006CD56D /* ViewControllers */,
+				046B993028B290CD006CD56D /* Storyboards */,
 				04DCA43E28A643BC00E4E272 /* Assets.xcassets */,
-				04DCA44028A643BC00E4E272 /* LaunchScreen.storyboard */,
 				04DCA44328A643BC00E4E272 /* Info.plist */,
 			);
 			path = RegistrationViewControlier;
@@ -145,6 +186,9 @@
 				04DCA43628A643B900E4E272 /* AppDelegate.swift in Sources */,
 				04DCA43828A643B900E4E272 /* SceneDelegate.swift in Sources */,
 				04DCA44A28A6501400E4E272 /* WelcomeViewController.swift in Sources */,
+				046B993328B387E0006CD56D /* TabBarViewController.swift in Sources */,
+				046B992D28B28FCB006CD56D /* InformationViewController.swift in Sources */,
+				046B993528B38F9D006CD56D /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +335,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T48R4M2Q47;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RegistrationViewControlier/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -318,6 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T48R4M2Q47;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RegistrationViewControlier/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
