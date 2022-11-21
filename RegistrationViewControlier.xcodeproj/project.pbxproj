@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0411A980292B8D4200483E9C /* Extention + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411A97F292B8D4200483E9C /* Extention + UIView.swift */; };
+		0411A983292B991000483E9C /* BiographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411A982292B991000483E9C /* BiographyViewController.swift */; };
 		046B992D28B28FCB006CD56D /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B992C28B28FCB006CD56D /* InformationViewController.swift */; };
 		046B993328B387E0006CD56D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B993228B387E0006CD56D /* TabBarViewController.swift */; };
 		046B993528B38F9D006CD56D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B993428B38F9D006CD56D /* User.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		0411A97F292B8D4200483E9C /* Extention + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention + UIView.swift"; sourceTree = "<group>"; };
+		0411A982292B991000483E9C /* BiographyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiographyViewController.swift; sourceTree = "<group>"; };
 		046B992C28B28FCB006CD56D /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		046B993228B387E0006CD56D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		046B993428B38F9D006CD56D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				04DCA43928A643B900E4E272 /* LoginViewController.swift */,
 				04DCA44928A6501400E4E272 /* WelcomeViewController.swift */,
 				046B992C28B28FCB006CD56D /* InformationViewController.swift */,
+				0411A982292B991000483E9C /* BiographyViewController.swift */,
 				046B993228B387E0006CD56D /* TabBarViewController.swift */,
 			);
 			path = ViewControllers;
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04DCA43A28A643B900E4E272 /* LoginViewController.swift in Sources */,
+				0411A983292B991000483E9C /* BiographyViewController.swift in Sources */,
 				04DCA43628A643B900E4E272 /* AppDelegate.swift in Sources */,
 				04DCA43828A643B900E4E272 /* SceneDelegate.swift in Sources */,
 				04DCA44A28A6501400E4E272 /* WelcomeViewController.swift in Sources */,
