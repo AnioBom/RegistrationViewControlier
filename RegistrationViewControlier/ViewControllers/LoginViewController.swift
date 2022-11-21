@@ -12,31 +12,23 @@ final class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var nameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    let person = UserModel(name: "Albina", surname: "Petrenko", age: 31, gender: "female", profetional: "Doctor", hobbies: "reading and learning korean language ")
-    
-    private let user = "привет"
-    private let password = "12"
-    
-    override func viewDidLoad() {
-            super.viewDidLoad()
-        
-        
-    }
-    
+    private let user = User.getUserData()
     
     // MARK: - Group of override methods
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBar = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBar.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let welcomVC = viewController as? WelcomeViewController {
+                welcomVC.user = user
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard  let userInfoVC = navigationVC.topViewController as? InformationViewController else { return }
+                userInfoVC.user = user
+            }
+        }
     }
-    
-    /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = "\(person.name) \(person.surname)"
-    }
-     */
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -46,7 +38,7 @@ final class LoginViewController: UIViewController, UITextFieldDelegate {
     //MARK: - main buttons
     
     @IBAction func logInPressed() {
-        guard nameTF.text == user, passwordTF.text == password else {
+        guard nameTF.text == user.login, passwordTF.text == user.password else {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password",
@@ -61,8 +53,8 @@ final class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func forgotRegisterDate(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Oops!", message: "Your name is \(user)!")
-        :showAlert(title: "Oops!", message: "Your password is \(password)")
+        ? showAlert(title: "Oops!", message: "Your name is \(user.login)!")
+        :showAlert(title: "Oops!", message: "Your password is \(user.password)")
     }
     
     //MARK: - go to the next screen
