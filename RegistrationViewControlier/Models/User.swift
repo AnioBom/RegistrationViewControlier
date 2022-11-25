@@ -22,35 +22,50 @@ struct Person {
     let name: String
     let surname: String
     let photo: String
-    let age: String
-    let gender: Gender
-    let job: String
+    let job: Company
     let hobbies: String
     let description: String
     
     var fullName: String {
         "\(name) \(surname)"
     }
+        
     
     static func getPerson() -> Person {
         Person(
-            name: "Tom",
-            surname: "Harvi",
-            photo: "",
-            age: "30",
-            gender: Gender.man,
-            job: "Manadger",
-            hobbies: "swimming, shopping",
+            name: "Albina",
+            surname: "Petrenko",
+            photo: "IMG_1713",
+            job: Company.getCompany(),
+            hobbies: "Workout, learning foreign languages ( French & English )",
             description: """
-            I was born in a southern city, graduated from a prestigious university and found a promising job
+            Even though I have a medical education, I really like my job as a developer and I am always learn something new. In addition to work, I like to go to gym and study foreign languages. At the moment I'm learning English and French, both languages at an intermediate level.
             """
         )
     }
 }
 
-enum Gender: String {
-    case man = "man"
-    case femail = "female"
-    case na = "N/A"
+struct Company {
+    let title: String
+    let jobTitle: JobTitle
+    let department: Department
+    
+    static func getCompany() -> Company {
+        Company(
+            title: "Apple",
+            jobTitle: .it,
+            department: .it
+        )
+    }
 }
 
+enum JobTitle: String {
+    case ceo = "CEO"
+    case it = " IT"
+}
+
+enum Department: String {
+    case management = "Management"
+    case marketing = "Marketing"
+    case it = "Mobile development"
+}
